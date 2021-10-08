@@ -7,6 +7,16 @@
     <title>Project Ecom App</title>
 </head>
 <body>
-    <h1 style="color:rgb(0, 38, 255); font-size:2rem;">Servicios</h1>
+    {% extends "ProjectEcomApp/inicio.html" %}
+
+    {% load static %}
+
+    {% block content %}
+        <div><p>
+            <h2 style="color: black">{{servicio.titulo}}</h2>
+            <p style="color: black">{{servicio.contenido}}</p>
+            <img src="{{servicio.imagen.url}}">
+        </p></div>
+    {% endblock %}
 </body>
 </html>
