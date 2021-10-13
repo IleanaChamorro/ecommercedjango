@@ -7,16 +7,16 @@
     <title>Project Ecom App</title>
 </head>
 <body>
-    {% extends "ProjectEcomApp/inicio.html" %}
-
     {% load static %}
 
-    {% block content %}
-        <div><p>
-            <h2 style="color: black">{{servicio.titulo}}</h2>
-            <p style="color: black">{{servicio.contenido}}</p>
-            <img src="{{servicio.imagen.url}}">
-        </p></div>
+    {% block content%}
+        {% for servicio in servicios %}
+            <div><p>
+                <h2>{{servicio.titulo}}</h2>
+                <p>{{servicio.contenido}}</p>
+                <p><img src="{{servicio.imagen.url}}"></p>
+            </p></div>
+        {% endfor %}
     {% endblock %}
 </body>
 </html>
