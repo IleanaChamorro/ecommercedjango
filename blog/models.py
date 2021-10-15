@@ -16,8 +16,8 @@ class Categoria(models.Model):
 
     
 class Noticias(models.Model):
-    titulo=models.CharField(max_length=60)
-    contenido=models.CharField(max_length=50)
+    titulo=models.CharField(max_length=200)
+    contenido=models.CharField(max_length=400)
     imagen=models.ImageField(upload_to="blog", null=True, blank=True)
     author=models.ForeignKey(User, on_delete=models.CASCADE)
     categorias=models.ManyToManyField(Categoria)

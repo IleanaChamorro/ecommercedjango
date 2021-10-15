@@ -1,0 +1,16 @@
+{% extends "ProjectEcomApp/inicio.html" %}
+
+{% load static %}
+
+{% block content %}
+    {% for noticias in noticias %}
+    <div class="card" style="width: 18rem;">
+        <img src="{{noticias.imagen.url}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{noticias.titulo}}</h5>
+          <p class="card-text">{{noticias.contenido}}</p>
+          <a href="#" class="btn btn-primary">Ver noticia</a>
+        </div>
+      </div>
+    {% endfor %}
+{% endblock %}

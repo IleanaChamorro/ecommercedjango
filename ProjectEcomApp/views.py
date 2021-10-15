@@ -11,6 +11,3 @@ def tienda(request):
 def contacto(request):
 
     return render(request, 'ProjectEcomApp/contacto.html')
-def info(request):
-
-    return render(request, 'ProjectEcomApp/info.html')
