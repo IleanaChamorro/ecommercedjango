@@ -1,0 +1,26 @@
+{% extends "ProjectEcomApp/inicio.html" %}
+
+{% load static %}
+
+{% block content %}
+    {% for noticias in noticias %}
+    <div class="card" style="width: 20rem;">
+        <img src="{{noticias.imagen.url}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{noticias.titulo}}</h5>
+          <p class="card-text">{{noticias.contenido}}</p>
+          <div style="text-align: left; font-size: 0.7rem;">
+            Autor: {{noticias.author}}
+          </div>
+          <section>
+            <div style="width:75%; margin: auto; text-align: center;">
+              {% for categorias in noticias.categorias.all %}
+                Categoria: {{categorias.nombre}} &nbsp;&nbsp;&nbsp;
+              {% endfor %}
+            </div>
+          <a href="#" class="btn btn-primary">Ver noticia</a>
+        </div>
+      </div>
+    {% endfor %}
+    </section>
+{% endblock %}
