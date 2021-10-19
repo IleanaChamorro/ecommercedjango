@@ -1,3 +1,6 @@
 body{
-    background-color: red;
+    color: black !important;
+}
+.categorias{
+    color: red ;
 }
