@@ -8,6 +8,3 @@ def inicio(request):
 def tienda(request):
 
     return render(request, 'ProjectEcomApp/tienda.html')
-def contacto(request):
-
-    return render(request, 'ProjectEcomApp/contacto.html')

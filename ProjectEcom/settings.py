@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'ProjectEcomApp',
     'servicios',
     'blog',
+    'contacto',
 ]
 
 MIDDLEWARE = [
