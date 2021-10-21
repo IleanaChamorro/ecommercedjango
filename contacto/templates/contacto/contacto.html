@@ -3,5 +3,13 @@
 {% load static %}
 
 {% block content %}
-    {{formulario}}
+<div class="container" id="Formulario" style="text-align:center;">
+    <form action="" method="POST">
+        {% csrf_token %}
+        <table style="color: white; margin: 20px auto;">
+            {{formulario.as_table}}
+        </table>
+        <input type="submit" value="Enviar" style="width:150px">
+    </form>
+</div>
 {% endblock %}
