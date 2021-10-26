@@ -3,7 +3,16 @@
 {% load static %}
 
 {% block content %}
-    <div><p>
-
-    </p></div>
+    {% for productos in productos %}
+    <div class="card" style="width: 20rem;">
+        <div class="card-body">
+            <img src="{{productos.imagen.url}}">
+        <h5 class="card-title">{{productos.titulo}}</h5>
+        <p class="card-text">{{productos.precio}}</p>
+        <div style="text-align: left; font-size: 0.7rem;">
+            Disponibilidad: {{productos.disponibilidad}}
+            <br/>
+            Categoria: {{productos.categorias}}
+        </div>
+        {% endfor %}
 {% endblock %}
