@@ -13,3 +13,7 @@ input{
     width: 50%;
     border-radius: 10px;
 }
+.imgprod{
+    max-width: 100px;
+    height: auto;
+}

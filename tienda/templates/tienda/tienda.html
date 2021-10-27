@@ -1,18 +1,24 @@
 {% extends "ProjectEcomApp/inicio.html" %}
 
 {% load static %}
-
 {% block content %}
-    {% for productos in productos %}
-    <div class="card" style="width: 20rem;">
-        <div class="card-body">
-            <img src="{{productos.imagen.url}}">
-        <h5 class="card-title">{{productos.titulo}}</h5>
-        <p class="card-text">{{productos.precio}}</p>
-        <div style="text-align: left; font-size: 0.7rem;">
-            Disponibilidad: {{productos.disponibilidad}}
-            <br/>
-            Categoria: {{productos.categorias}}
+<div class="container">
+    <div class="row">
+        {% for productos in productos %}
+        <div class="col"> 
+        <div class="card" style="width: 100%">
+                <img src="{{productos.imagen.url}}">
+                <div class="card-body" style="text-align: center;">
+                    <h7 class="card-title">
+                        {{productos.titulo}}
+                    </h7>
+                    <p class="card-text">
+                        {{productos.precio}}&nbsp;$
+                    </p>
+                </div>
+            </div>
         </div>
-        {% endfor %}
+    {% endfor %}
+    </div>
+</div>
 {% endblock %}
