@@ -5,9 +5,9 @@
 <div class="container">
     <div class="row">
         {% for productos in productos %}
-        <div class="col"> 
-        <div class="card" style="width: 100%">
-                <img src="{{productos.imagen.url}}">
+        <div class="col-md-4"> 
+        <div class="card" style="width: 100%; margin: 5px 5px;">
+                <img src="{{productos.imagen.url}}" class="card-img-top">
                 <div class="card-body" style="text-align: center;">
                     <h7 class="card-title">
                         {{productos.titulo}}
