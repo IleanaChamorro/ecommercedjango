@@ -1,5 +1,5 @@
 class Carrito:
-     #Almacenar peticion compra
+    #Almacenar peticion compra
     def __init__(self, request):
         self.request=request
         self.session=request.session
@@ -9,7 +9,6 @@ class Carrito:
             carro=self.session["carro"]={}
         else:
             self.carro=carro
-
 
     def agregar(self, productos):
         if(str(productos.id) not in self.carro.keys()):
@@ -48,5 +47,5 @@ class Carrito:
         self.guardar_items()
 
     def limpiar_carro(self):
-        carro=self.session["carro"]={}
+        self.session["carro"]={}
         self.session.modified=True
