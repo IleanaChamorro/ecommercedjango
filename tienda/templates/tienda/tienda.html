@@ -4,7 +4,7 @@
 {% block content %}
 <div class="container">
     <div style="float:right;">
-        <p style="color: black;">Carrito</p>
+        <p style="color: black;">Total: {{importe_total_carro}}</p>
     </div>
     <div class="row">
         {% for productos in productos %}
@@ -20,7 +20,7 @@
                     </p>
                 </div>
                 <div class="card-footer text-center">
-                    <a href="#" class="btn btn-success">Agregar al carrito</a>
+                    <a href="#" class="btn btn-success">Agregar al carro</a>
                 </div>
             </div>
         </div>

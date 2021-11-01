@@ -1,4 +1,4 @@
-class Carrito:
+class carro:
     #Almacenar peticion compra
     def __init__(self, request):
         self.request=request
