@@ -1,28 +1,27 @@
-from django.shortcuts import render
-from .carro import Carro
+from django.shortcuts import render, redirect
+from .carrito import Carro
 from tienda.models import Producto
-from django.shortcuts import redirect
 
 # Create your views here.
-def agregar_producto(request, producto_id):
-    carro=carro(request)
-    producto=Producto.objects.get(id=producto_id)
-    carro.agregar(producto=producto)
+def agregar_producto(request, productos_id):
+    carrito=Carro(request)
+    producto=Producto.objects.get(id=productos_id)
+    carrito.agregar(producto=producto)
     return redirect("tienda")
 
-def eliminar_producto(request, producto_id):
-    carro=carro(request)
-    producto=Producto.objects.get(id=producto_id)
-    carro.eliminar(producto=producto)
+def eliminar_producto(request, productos_id):
+    carrito=Carro(request)
+    producto=Producto.objects.get(id=productos_id)
+    carrito.eliminar_items(producto=producto)
     return redirect("tienda")
 
-def quitar_producto(request, producto_id):
-    carro=carro(request)
-    producto=Producto.objects.get(id=producto_id)
-    carro.restar_producto(producto=producto)
+def quitar_producto(request, productos_id):
+    carrito=Carro(request)
+    producto=Producto.objects.get(id=productos_id)
+    carrito.quitar_producto(producto=producto)
     return redirect("tienda")
 
-def limpiar_carro(request, producto_id):
-    carro=carro(request)
-    carro.limpiar_carro()
+def limpiar_carro(request, productos_id):
+    carrito=Carro(request)
+    carrito.limpiar_carro()
     return redirect("tienda")

@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'blog',
     'contacto',
     'tienda',
-    'carro',
+    'carrito',
 ]
 
 MIDDLEWARE = [
@@ -69,7 +69,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'carro.context_processor.importe_total_carro',
+                'carrito.context_processor.importe_total_carro'
             ],
         },
     },
@@ -87,7 +87,6 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
